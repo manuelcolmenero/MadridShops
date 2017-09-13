@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dDY-Wf-q2O">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RCW-Iz-P02">
+            <objects>
+                <navigationController id="dDY-Wf-q2O" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tdr-hA-JbH">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ovN-1q-Cnc" kind="relationship" relationship="rootViewController" id="9Nn-md-lNn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ygn-Pz-lvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="96"/>
+        </scene>
+        <!--¡MAD!-->
+        <scene sceneID="wRc-My-BFn">
+            <objects>
+                <viewController id="ovN-1q-Cnc" customClass="MainViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ou9-9L-Pww">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-cf-3Ph">
+                                <rect key="frame" x="154" y="488" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="LGi-z4-Eht"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="¡MAD!" id="5wM-8c-hj2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="v4b-pU-2H0">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="vh7-nW-zsl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="orangeRectangle" destination="uJO-cf-3Ph" id="WoC-lJ-85C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLg-RZ-I47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="96"/>
+        </scene>
+        <!--Shops-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AJZ-KV-n4c">
+                                <rect key="frame" x="0.0" y="400" width="414" height="336"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AXy-aI-wuq">
+                                    <size key="itemSize" width="301" height="58"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="ShopCell" id="wlH-OX-5GS" customClass="ShopCell" customModule="MadridShops" customModuleProvider="target">
+                                        <rect key="frame" x="56.666666666666664" y="0.0" width="301" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="301" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="66X-kp-QHq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="341" height="98"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cN9-v3-Lpr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="85" height="58"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="cN9-v3-Lpr" secondAttribute="height" multiplier="85:58" id="yod-bE-zwC"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egl-nc-dFr">
+                                                            <rect key="frame" x="87" y="0.0" width="214" height="58"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="egl-nc-dFr" firstAttribute="height" secondItem="66X-kp-QHq" secondAttribute="height" id="6k7-3F-jd3"/>
+                                                        <constraint firstItem="egl-nc-dFr" firstAttribute="top" secondItem="66X-kp-QHq" secondAttribute="top" id="Nhp-vL-IAE"/>
+                                                        <constraint firstItem="cN9-v3-Lpr" firstAttribute="top" secondItem="66X-kp-QHq" secondAttribute="top" id="dPa-KS-Sql"/>
+                                                        <constraint firstItem="cN9-v3-Lpr" firstAttribute="height" secondItem="66X-kp-QHq" secondAttribute="height" id="h7A-Mf-9Kj"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="66X-kp-QHq" firstAttribute="centerY" secondItem="wlH-OX-5GS" secondAttribute="centerY" id="8bo-h0-oTR"/>
+                                            <constraint firstItem="66X-kp-QHq" firstAttribute="centerX" secondItem="wlH-OX-5GS" secondAttribute="centerX" id="MAt-E2-Ymm"/>
+                                            <constraint firstItem="66X-kp-QHq" firstAttribute="top" secondItem="wlH-OX-5GS" secondAttribute="top" id="fgN-2f-wG2"/>
+                                            <constraint firstItem="66X-kp-QHq" firstAttribute="height" secondItem="wlH-OX-5GS" secondAttribute="height" id="tl6-o5-meY"/>
+                                            <constraint firstItem="66X-kp-QHq" firstAttribute="width" secondItem="wlH-OX-5GS" secondAttribute="width" id="yWC-D0-fZ3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="cN9-v3-Lpr" id="DCK-5d-2bX"/>
+                                            <outlet property="labelView" destination="egl-nc-dFr" id="Tez-XM-nGy"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7oh-cl-0bn">
+                                <rect key="frame" x="0.0" y="64" width="414" height="336"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7oh-cl-0bn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6QD-dV-MgH"/>
+                            <constraint firstItem="7oh-cl-0bn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7WQ-UN-g3M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJZ-KV-n4c" secondAttribute="bottom" id="UKF-n1-yB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oh-cl-0bn" secondAttribute="trailing" id="cke-1f-TGr"/>
+                            <constraint firstItem="AJZ-KV-n4c" firstAttribute="top" secondItem="7oh-cl-0bn" secondAttribute="bottom" id="eyy-qm-TYi"/>
+                            <constraint firstItem="AJZ-KV-n4c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mIc-gO-3Wu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJZ-KV-n4c" secondAttribute="trailing" id="o5P-eu-Aha"/>
+                            <constraint firstItem="AJZ-KV-n4c" firstAttribute="height" secondItem="7oh-cl-0bn" secondAttribute="height" id="toC-Ft-OYp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="t7Q-vS-MEh"/>
+                    <connections>
+                        <outlet property="shopsCollectionView" destination="AJZ-KV-n4c" id="blt-Dd-Lqn"/>
+                        <segue destination="sgF-tf-aJZ" kind="show" identifier="ShowShopDetailSegue" id="d5j-Uh-gKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="95"/>
+        </scene>
+        <!--Shop Detail View Controller-->
+        <scene sceneID="K4p-5F-tWm">
+            <objects>
+                <viewController id="sgF-tf-aJZ" customClass="ShopDetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TRR-lp-GB5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GQW-02-AeS">
+                                <rect key="frame" x="20" y="84" width="374" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lucas ipsum dolor sit amet bail mon freedon aayla maarek bimm -lom jinn tund seerdon. Garindan jerjerrod sith raioballo chagrian yuvernian togruta gora galen. Tion kal medon gorax dalonbian lars darth. C-3p0 golda ponda teneniel jettster kyle anzati omas monkey-lizard. Haako fel kyle wilhuff er'kit aayla ansionian cal shado. Secura fett malastare solo sullustan beru. Priapulin lando bajic felth bespin dormé jin'ha. Metalorn piell argazdan piell max dantari. Binks antilles katarn ansionian. Plo luuke rex padmé desann dormé nadd.
+
+Dunhausen dormé dashade lars b4-d4 utapau san. Felth aqualish kit moff soontir piett. Baba yowza ozzel mace boz solo darth. Teevan galen habassa saurin. Gunray isard asajj zam jusik kashyyyk. Rex jade raioballo b'omarr. Lars mustafar chazrach gossam gen'dai voxyn. Organa zuggs zam quermian chewbacca warrick yaka danni jamillia. Gerb zev neimoidian annoo. Quermian polis gev watto r5-d4 roan bothawui. Ongree gamorrean zabrak antilles biggs. Leia ewok derek hoojib. Zeltron qui-gon baba nadd bothawui iktotchi dooku aruzan.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbb-Ue-czl">
+                                <rect key="frame" x="20" y="460" width="374" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="f4K-r5-umT"/>
+                    </view>
+                    <connections>
+                        <outlet property="shopDetailDescription" destination="GQW-02-AeS" id="40Z-EX-XTE"/>
+                        <outlet property="shopImage" destination="vbb-Ue-czl" id="6K5-IX-1tN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbq-L1-CQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="94.565217391304358"/>
+        </scene>
+    </scenes>
+</document>
