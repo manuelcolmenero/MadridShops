@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
-    var shops : Shops?
+    var context : NSManagedObjectContext!
+    var shops   : Shops?
 
     @IBOutlet weak var shopsCollectionView: UICollectionView!
     
@@ -29,6 +31,12 @@ class ViewController: UIViewController {
             
             self.shopsCollectionView.delegate   = self
             self.shopsCollectionView.dataSource = self
+            
+            // Cuando se termina de obtener de internet las shops se guardan en local
+            let cacheInteractor = SaveAllShopsInteractorImpl()
+            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
+                
+            })
             
         }) { (error: Error) in
             // Se han procedido un error
